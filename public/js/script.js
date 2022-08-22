@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000")
+const socket = io("https://room-chito-app.herokuapp.com/")
 const chatbox = document.querySelector("#chatbox")
 const url = new URL(location.href)
 const room = url.searchParams.get("room")
