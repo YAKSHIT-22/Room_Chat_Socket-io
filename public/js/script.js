@@ -13,13 +13,11 @@ button.addEventListener("click",(e)=>{
         alert("Please type something")
     }
     else {
-        displayMessage(username, input.value)
-        chatbox.scrollTop = chatbox.scrollHeight
-        socket.emit("chatmessage", input.value)
+        socket.emit("chat_message", input.value)
         input.value= ""
  
     }
-     
+      
        
 })
 socket.on("chat",(obj)=>{
