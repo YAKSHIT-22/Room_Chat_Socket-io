@@ -8,9 +8,19 @@ const button = document.querySelector("button");
 
 
 button.addEventListener("click",(e)=>{
-        e.preventDefault()
-        socket.emit("chatmessage",input.value)
-        input.value = ""
+    e.preventDefault()
+    if (input.value == "") {
+        alert("Please type something")
+    }
+    else {
+        displayMessage(username, input.value)
+        chatbox.scrollTop = chatbox.scrollHeight
+        socket.emit("chatmessage", input.value)
+        input.value= ""
+ 
+    }
+     
+       
 })
 socket.on("chat",(obj)=>{
         displayMessage(obj.username,obj.msg)
