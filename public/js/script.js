@@ -13,7 +13,7 @@ button.addEventListener("click",(e)=>{
         alert("Please type something")
     }
     else {
-        socket.emit("chat_message", input.value)
+        socket.emit("chatmessage", input.value)
         input.value= ""
  
     }
