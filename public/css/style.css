@@ -44,9 +44,9 @@ background-size: cover;
 	 border-radius: 8px;
 	 overflow: hidden;
 	 padding-bottom: 65%;
-	 background-image: url("https://assets.codepen.io/285131/coffee_1.jpg");
+	 background-image: url("https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 	 background-repeat: no-repeat;
-	 background-size: 150%;
+	 background-size: 100%;
 	 background-position: 0 5%;
 	 position: relative;
 }
@@ -57,7 +57,7 @@ background-size: cover;
 	 right: 10%;
 	 font-size: 1.5rem;
 	 font-weight: 600;
-	 color: black;
+	 color: #fff;
 	 line-height: 1.222;
 }
  .card-heading small {
