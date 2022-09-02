@@ -1,5 +1,6 @@
 const socket = io(" https://chito-room-chat.herokuapp.com")
 const chatbox = document.querySelector(".chatbox")
+const chatarea = document.querySelector(".chat-area");
 const url = new URL(location.href)
 const room = url.searchParams.get("room")
 const username = url.searchParams.get("username")
@@ -38,15 +39,18 @@ function enterKeyPressed(event) {
 socket.on("chat",(obj)=>{
         displayMessage(obj.username,obj.msg)
         chatbox.scrollTop = chatbox.scrollHeight
+        chatarea.scrollTop = chatbox.scrollHeight
 })
 socket.emit("joinroom",{username: username, room:room})
 socket.on("join",(data)=>{
          displayMessage(data.username,data.msg)
          chatbox.scrollTop = chatbox.scrollHeight
+         chatarea.scrollTop = chatbox.scrollHeight
 })
 socket.on("left",(obj)=>{
     displayMessage(obj.username,obj.msg)
     chatbox.scrollTop = chatbox.scrollHeight
+    chatarea.scrollTop = chatbox.scrollHeight
 
 })
 socket.on("connect", ()=>{
